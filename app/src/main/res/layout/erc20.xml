@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ERC20"
+            android:textColor="#AED581"
+            android:textSize="40sp" />
+
+        <Spinner
+            android:id="@+id/address_list"
+            android:layout_centerHorizontal="true"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="15dp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FAFFF2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="잔액 조회"
+                android:textColor="#8BAA67"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/erc20_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:text="잔액을 띄워야지"
+                android:textColor="#AED581"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="토큰 전송"
+                android:textColor="#8BAA67"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/erc20_transfer_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:hint="주소를 입력하세요"
+                android:textColorHint="#AED581"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/erc20_transfer_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:hint="금액을 입력하세요"
+                android:textColorHint="#AED581"
+                android:textSize="12sp"
+                android:inputType="number"/>
+
+            <Button
+                android:id="@+id/erc20_transfer_btn"
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#DEEDC8"
+                android:text="전송"
+                android:textColor="#33691E"
+                app:cornerRadius="60dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ether_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#E7EAE2"
+                android:text="Ether"
+                android:textSize="10dp"
+                android:textColor="#33691E"
+                app:cornerRadius="60dp" />
+
+            <Button
+                android:id="@+id/nft_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#E7EAE2"
+                android:text="NFT"
+                android:textSize="10dp"
+                android:textColor="#33691E"
+                app:cornerRadius="60dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

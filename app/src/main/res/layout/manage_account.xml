@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage Account"
+            android:textColor="#AED581"
+            android:textSize="40sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="5dp">
+
+            <Button
+                android:id="@+id/new_account"
+                android:text="create"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#DEEDC8"
+                android:textColor="#33691E"
+                app:cornerRadius="60dp" />
+
+            <EditText
+                android:id="@+id/password_text_create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textVisiblePassword"
+                android:hint="input password for account"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="5dp">
+
+            <Button
+                android:id="@+id/import_account"
+                android:text="Import"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#DEEDC8"
+                android:textColor="#33691E"
+                app:cornerRadius="60dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="5dp">
+                <EditText
+                    android:id="@+id/private_key_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textVisiblePassword"
+                    android:hint="input private key"/>
+                <EditText
+                    android:id="@+id/password_text_import"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textVisiblePassword"
+                    android:hint="input password for account"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="5dp">
+
+            <Button
+                android:id="@+id/import_account_with_keyfile"
+                android:text="Import Account With Keyfile"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#FEEDC8"
+                android:textColor="#33691E"
+                app:cornerRadius="60dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="select account to export or delete"
+            android:gravity="center"/>
+        <Spinner
+            android:id="@+id/address_list"
+            android:layout_centerHorizontal="true"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Export Account"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginBottom="5dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <EditText
+                    android:id="@+id/password_text_export"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textVisiblePassword"
+                    android:hint="current password for account"/>
+                <EditText
+                    android:id="@+id/new_password_text_export"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textVisiblePassword"
+                    android:hint="new password for account"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/export_account_keyfile"
+                    android:text="keyfile"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#DEEDC8"
+                    android:textColor="#33691E"
+                    app:cornerRadius="60dp" />
+
+                <Button
+                    android:id="@+id/export_account_privatekey"
+                    android:text="private Key"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#DEEDC8"
+                    android:textColor="#33691E"
+                    app:cornerRadius="60dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Account"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginHorizontal="5dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <EditText
+                    android:id="@+id/password_text_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textVisiblePassword"
+                    android:hint="input password for account"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/delete_account"
+                android:text="delete"
+               android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#DEEDC8"
+                android:textColor="#33691E"
+                app:cornerRadius="60dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
